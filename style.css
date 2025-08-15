@@ -1,0 +1,65 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+  }
+  
+  header {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .profile img {
+    width: 300px;
+    border-radius: 8px;
+    margin-right: 2rem;
+  }
+  
+  .intro {
+    flex: 1;
+  }
+  
+  .portfolio {
+    background: #f4f4f4;
+    padding: 2rem;
+  }
+  
+  .portfolio h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+  }
