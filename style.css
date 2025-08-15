@@ -1,65 +1,111 @@
 body {
-    font-family: 'Helvetica', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #fff;
-    color: #333;
-  }
-  
-  header {
-    background: #000;
-    color: #fff;
-    padding: 2rem;
+  font-family: sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+header, footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.portfolio {
+  padding: 2rem;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.slider-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  padding: 1rem;
+}
+
+.slider-container::-webkit-scrollbar {
+  height: 8px;
+}
+.slider-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide.active img {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+
+.intro-section {
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.intro-content {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.intro-left img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.intro-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro-right h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 📱 모바일 대응 */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .profile {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
+
+  .intro-left img {
+    max-width: 80%;
+    margin: 0 auto;
   }
-  
-  .profile img {
-    width: 300px;
-    border-radius: 8px;
-    margin-right: 2rem;
-  }
-  
-  .intro {
-    flex: 1;
-  }
-  
-  .portfolio {
-    background: #f4f4f4;
-    padding: 2rem;
-  }
-  
-  .portfolio h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .gallery img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #000;
-    color: #fff;
-  }
+}
